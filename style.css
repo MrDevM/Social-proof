@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+  --card-bgc: hsl(300, 43%, 22%);
+  --rateing-bgc: hsl(333, 80%, 67%);
+  --card-color: hsl(0, 0%, 100%);
+  --text-color: hsl(303, 10%, 53%);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url("images/bg-pattern-top-desktop.svg"),
+    url("images/bg-pattern-bottom-desktop.svg");
+  background-position: top left, bottom right;
+}
+p {
+  line-height: 20px;
+}
+main {
+  font-family: "League Spartan", sans-serif;
+  margin: 5% 11.5%;
+  color: hsl(300, 43%, 22%);
+}
+/* ------------------ Text upper div ------------------ */
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+/* --------------- left part ---------------  */
+.left {
+  width: 40%;
+}
+.left h1 {
+  font-size: 45px;
+  padding-right: 40px;
+}
+.left p {
+  margin-top: 20px;
+  padding-right: 15px;
+  color: var(--text-color);
+}
+
+.images {
+  margin-right: 20px;
+}
+
+/* --------------- stare or right part ---------------  */
+.rate {
+  --rateing-bgc: hsl(300, 24%, 96%);
+}
+.rate > div {
+  display: flex;
+  padding: 15px 25px;
+  background-color: var(--rateing-bgc);
+  border-radius: 5px;
+}
+.ratediv {
+  position: relative;
+  right: 5rem;
+}
+.ratediv2 {
+  position: relative;
+  right: 2.5rem;
+  margin-top: 15px;
+}
+.ratediv3 {
+  margin-top: 15px;
+}
+.ratediv strong {
+  display: block;
+}
+/* ------------------  cards div ------------------ */
+.cards {
+  display: flex;
+  margin-top: 50px;
+  --card-bgc: hsl(310, 66%, 20%);
+}
+.cards > div {
+  background-color: var(--card-bgc);
+  color: var(--card-color);
+  width: 50%;
+  padding: 35px 30px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.cards .sec {
+  position: relative;
+  margin-right: 23px;
+  top: 20px;
+}
+.cards .first {
+  margin-right: 23px;
+}
+.cards .thee {
+  position: relative;
+  top: 40px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.top img {
+  height: 40px;
+  border-radius: 50%;
+}
+.profile {
+  margin-left: 20px;
+}
+.profile > * {
+  display: block;
+}
+.profile span {
+  margin-top: 5px;
+  color: var(--rateing-bgc);
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("images/bg-pattern-top-mobile.svg"),
+      url("images/bg-pattern-bottom-mobile.svg");
+    background-position: left top, right bottom;
+  }
+  main {
+    max-width: 100%;
+    margin: 3rem 1.5rem;
+  }
+  .text {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .left {
+    text-align: center;
+  }
+  .left h1 {
+    padding: 0;
+  }
+  .text > div {
+    width: 100%;
+  }
+  .rate {
+    margin-top: 25px;
+  }
+  .rate > div {
+    padding: 15px 0 15px 5px;
+  }
+  .rate > div {
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+  }
+  .rate div .images,
+  .rate div .startext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .startext {
+    margin-top: 10px;
+  }
+  .cards {
+    display: block;
+  }
+  .cards > div {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
